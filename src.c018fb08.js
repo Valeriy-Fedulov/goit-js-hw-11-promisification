@@ -3,8 +3,8 @@ const e=e=>{return new Promise((t,n)=>{setTimeout(()=>{t(e)},e)})},t=e=>console.
 },{}],"n9ff":[function(require,module,exports) {
 const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>{return new Promise((n,t)=>{n(e.map(e=>e.name===a?{...e,active:!e.active}:e))})},n=e=>console.table(e);a(e,"Mango").then(n),a(e,"Lux").then(n);
 },{}],"T9OW":[function(require,module,exports) {
-const t=(t,n)=>Math.floor(Math.random()*(n-t+1)+t),n=(n,a,o)=>{const e=t(200,500);return new Promise((t,a)=>{setTimeout(()=>{Math.random()>.3?t(n.id,e):a(n.id)},e)})},a=(t,n)=>{console.log(`Transaction ${t} processed in ${n}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};n({id:70,amount:150}).then(a).catch(o),n({id:71,amount:230}).then(a).catch(o),n({id:72,amount:75}).then(a).catch(o),n({id:73,amount:100}).then(a).catch(o);
+const t=(t,n)=>Math.floor(Math.random()*(n-t+1)+t),n=n=>{const a=t(200,500);return new Promise((t,o)=>{setTimeout(()=>{Math.random()>.3?t({id:n.id,time:a}):o(n.id)},a)})},a=({id:t,time:n})=>{console.log(`Transaction ${t} processed in ${n}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};n({id:70,amount:150}).then(a).catch(o),n({id:71,amount:230}).then(a).catch(o),n({id:72,amount:75}).then(a).catch(o),n({id:73,amount:100}).then(a).catch(o);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/task1.js"),require("./js/task2.js"),require("./js/task3.js");
 },{"./js/task1.js":"u2QS","./js/task2.js":"n9ff","./js/task3.js":"T9OW"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification/src.7f8fbb21.js.map
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.c018fb08.js.map
